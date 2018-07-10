@@ -30,7 +30,16 @@ const actions = {
   logout({ commit }) {
     commit('UPDATE_AUTH', false)
     router.push({ name: 'Home', params: { logout: true } })
-  }
+  },
+  updateUser({ state, commit }, user) {
+      const stateUser = state.user
+
+      if (stateUser && typeof stateUser === 'object') {
+        user = { ...stateUser, ...user }
+      }
+
+      commit('UPDATE_USER', user)
+    }
 }
 
 const store = new Vuex.Store({
