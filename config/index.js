@@ -43,9 +43,9 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    // assetsPublicPath: '/',
+    assetsPublicPath: '/',
     // when using github pages
-    assetsPublicPath: '/vuejs-base/dist/',
+    // assetsPublicPath: '/vuejs-base/dist/',
 
     /**
      * Source Maps
